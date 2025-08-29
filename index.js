@@ -105,6 +105,12 @@ app.post('/bfhl', (req, res) => {
     }
 });
 
+//On screen message for root route
+app.get('/', (req, res) => {
+  res.send('API is running successfully');
+});
+
+
 // Use dynamic port for deployment (e.g., Render)
 const port = process.env.PORT || 3000;
 app.listen(port, () => {
