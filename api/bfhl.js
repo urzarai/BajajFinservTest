@@ -12,7 +12,7 @@ app.use((req, res, next) => {
     next();
 });
 
-app.post('/bfhl', (req, res) => {
+app.post('/', (req, res) => {
     try {
         const data = req.body.data;
 
@@ -101,5 +101,10 @@ app.post('/bfhl', (req, res) => {
         });
     }
 });
+
+app.get('/', (req, res) => {
+    res.send('API is running');
+});
+
 
 module.exports = app;
