@@ -1,9 +1,8 @@
-//LOCAL DEV WORK
 const express = require('express');
 const app = express();
 app.use(express.json());
 
-//Personal details
+// Personal details
 const fullName = "urza_rai";
 const dob = "10102004";
 const email = "raiurza@gmail.com";
@@ -106,8 +105,8 @@ app.post('/bfhl', (req, res) => {
     }
 });
 
-// Start the server
-const port = 3000;
+// Use dynamic port for deployment (e.g., Render)
+const port = process.env.PORT || 3000;
 app.listen(port, () => {
     console.log(`Server running on http://localhost:${port}`);
 });
